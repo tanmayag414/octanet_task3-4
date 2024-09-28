@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigation Bar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="css_task1happieloop.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <div class="name"><a href ="#">MUSTANG GT</a></div>
+                    <ul class="links">
+                        <li><a href="hero">HOME</a> </li>
+                        <li><a href="About">About</a> </li>
+                        <li><a href="Services">Services</a> </li>
+                        <li><a href="contact">contact</a> </li>
+                    </ul>
+                <a href="#" class="actionbtn">Get Started</a>
+                <div class="togglebtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdownmenu open">
+                <li><a href="hero">HOME</a> </li>
+                        <li><a href="About">About</a> </li>
+                        <li><a href="Services">Services</a> </li>
+                        <li><a href="contact">contact</a> </li>
+                        <li><a href="#" class="actionbtn">Get Started</a></li>
+            </div>
+
+        </header>
+
+        <main>
+            <section id="hero">
+                <h2>welcome to Mustang GT</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt molestiae tempora corrupti eveniet quod ratione temporibus pariatur,,<br> placeat voluptate odit officiis delectus nesciunt eaque commodi quis sint necessitatibus nobis ipsum.
+                    </p>
+            </section>
+        </main>
+        <script>
+            const togglebtn = document.querySelector('.togglebtn')
+            const togglebtnicon = document.querySelector('.togglebtn i')
+            const dropdownmenu = document.querySelector('.dropdownmenu')
+
+            togglebtn.onclick = function(){
+                dropdownmenu.classList.toggle('open')
+                const isopen = dropdownmenu.classList.contains('open')
+
+                togglebtnicon.classList = isopen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>
